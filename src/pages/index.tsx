@@ -7,6 +7,7 @@ import { connectors } from "config/constants/connectors";
 
 const Home: NextPage = () => {
   const { account, activate } = useActiveWeb3React();
+  console.log(process.env.NEXT_PUBLIC_RPCURL);
 
   useEffect(() => {
     activate(connectors["injected"]);
